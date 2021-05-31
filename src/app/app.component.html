@@ -15,7 +15,7 @@
           {{number}}
         </li>
         </div>
-       <div *ngIf="!onlyOdd"> <li
+       <div *appUnless="onlyOdd"> <li
           class="list-group-item"
           [ngClass]="{odd: number % 2 !==0}"
           [ngStyle]="{backgroundColor:number % 2 !==0 ? 'yellow':'blue'}"
@@ -24,7 +24,7 @@
         </li></div>
 
       </ul>
-      <ng-template [ngIf]="onlyOdd">
+      <ng-template [n="onlyOdd">
         <p>Only odd</p>
       </ng-template>
       <p appGreenBackground>Highlight me green</p>
